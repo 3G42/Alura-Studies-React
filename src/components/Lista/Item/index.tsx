@@ -1,12 +1,13 @@
+import { ITarefa } from "../../../types/tarefa";
 import style from "../style.module.scss";
 
 export default function Item({
   tarefa,
   tempo,
-}: {
-  tarefa: string;
-  tempo: string;
-}) {
+  selecionado,
+  completado,
+  id,
+}: ITarefa) {
   return (
     <li className={style.item}>
       <h3>{tarefa}</h3>
