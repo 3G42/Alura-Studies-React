@@ -2,6 +2,7 @@
   display:grid;
   grid-template-rows: min-content min-content auto;
   grid-template-areas: 
+  'options'
   'nova-tarefa'
   'cronometro'
   'tarefas'
@@ -17,6 +18,7 @@
 
   @media screen and (min-width:1280px){
     grid-template-areas: 
+    "options tarefas" 
     "nova-tarefa tarefas"
     "cronometro tarefas"
     ;
@@ -26,5 +28,20 @@
     justify-content: center;
     align-content: center;
     padding: 64px;
+  }
+
+  .options{
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: gray ;
+    border-radius: 12px;
+    .li{
+      text-align: center;
+      text-justify: center;
+    }
   }
 }

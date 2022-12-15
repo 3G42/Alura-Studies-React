@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 
 interface Props {
   selecionado: ITarefa | undefined;
-  finalizarTarefa: () => void;
+  finalizarTarefa: (selected: ITarefa | undefined) => void;
 }
 export default function Cronometro({ selecionado, finalizarTarefa }: Props) {
   const [tempo, setTempo] = useState<number>();
 
   useEffect(() => {
-    if (selecionado?.tempo) {
+    if (selecionado?.tempo || selecionado?.id === "Pomodoro") {
       setTempo(tempoParaSegundos(selecionado.tempo));
     }
   }, [selecionado]);
@@ -23,16 +23,25 @@ export default function Cronometro({ selecionado, finalizarTarefa }: Props) {
         setTempo(contador - 1);
         return regressiva(contador - 1);
       }
-      finalizarTarefa();
+      finalizarTarefa(selecionado);
     }, 1000);
   }
+  console.log("selecionado" + JSON.stringify(selecionado, null, 2));
   return (
     <div className={style.cronometro}>
-      <p className={style.titulo}>Escolha um card e inicie o cronômetro</p>
+      {selecionado && selecionado.id === "Pomodoro" ? (
+        <p className={style.titulo}>{selecionado.tarefa}</p>
+      ) : (
+        <p className={style.titulo}>Escolha um card e inicie o cronometro</p>
+      )}
       <div className={style.relogioWrapper}>
         <Relogio tempo={tempo === undefined ? 0 : tempo} />
       </div>
-      <Botao onClick={() => regressiva(tempo)}>Começar</Botao>
+      <Botao onClick={() => regressiva(tempo)}>
+        {selecionado && selecionado.id === "Pomodoro"
+          ? "Iniciar Pomodoro"
+          : "Começar"}
+      </Botao>
     </div>
   );
 }
