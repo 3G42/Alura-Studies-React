@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/alura-studies-react/static/css/main.432cdeac.css",
-    "main.js": "/alura-studies-react/static/js/main.cd2b5f96.js",
-    "static/js/845.1629ea67.chunk.js": "/alura-studies-react/static/js/845.1629ea67.chunk.js",
-    "static/media/alarmSound.mp3": "/alura-studies-react/static/media/alarmSound.f0ffc1ca7cb1673242d9.mp3",
-    "static/media/check-mark.svg": "/alura-studies-react/static/media/check-mark.bce2b13879a866366047.svg",
-    "index.html": "/alura-studies-react/index.html",
-    "main.432cdeac.css.map": "/alura-studies-react/static/css/main.432cdeac.css.map",
-    "main.cd2b5f96.js.map": "/alura-studies-react/static/js/main.cd2b5f96.js.map",
-    "845.1629ea67.chunk.js.map": "/alura-studies-react/static/js/845.1629ea67.chunk.js.map"
+    "main.css": "/Alura-Studies-React/static/css/main.07c00f98.css",
+    "main.js": "/Alura-Studies-React/static/js/main.2f2ff55d.js",
+    "static/js/845.1629ea67.chunk.js": "/Alura-Studies-React/static/js/845.1629ea67.chunk.js",
+    "static/media/alarmSound.mp3": "/Alura-Studies-React/static/media/alarmSound.f0ffc1ca7cb1673242d9.mp3",
+    "static/media/check-mark.svg": "/Alura-Studies-React/static/media/check-mark.bce2b13879a866366047.svg",
+    "index.html": "/Alura-Studies-React/index.html",
+    "main.07c00f98.css.map": "/Alura-Studies-React/static/css/main.07c00f98.css.map",
+    "main.2f2ff55d.js.map": "/Alura-Studies-React/static/js/main.2f2ff55d.js.map",
+    "845.1629ea67.chunk.js.map": "/Alura-Studies-React/static/js/845.1629ea67.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.432cdeac.css",
-    "static/js/main.cd2b5f96.js"
+    "static/css/main.07c00f98.css",
+    "static/js/main.2f2ff55d.js"
   ]
 }
