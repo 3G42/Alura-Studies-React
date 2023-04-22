@@ -1,9 +1,11 @@
-import Botao from "../Botao";
-import Relogio from "./Relogio";
-import style from "./Cronometro.module.scss";
-import { ITarefa } from "../../types/tarefa";
-import { tempoParaSegundos } from "../../common/utils/date";
 import { useEffect, useState } from "react";
+import useSound from "use-sound";
+import alarmSound from "../../assets/sounds/alarmSound.mp3";
+import { tempoParaSegundos } from "../../common/utils/date";
+import { ITarefa } from "../../types/tarefa";
+import Botao from "../Botao";
+import style from "./Cronometro.module.scss";
+import Relogio from "./Relogio";
 
 interface Props {
   selecionado: ITarefa | undefined;
@@ -11,6 +13,12 @@ interface Props {
 }
 export default function Cronometro({ selecionado, finalizarTarefa }: Props) {
   const [tempo, setTempo] = useState<number>();
+  const [playOn] = useSound(alarmSound, {
+    sprite: {
+      alarm: [7000, 5000],
+    },
+    volume: 0.5,
+  });
 
   useEffect(() => {
     if (selecionado?.tempo) {
@@ -23,6 +31,7 @@ export default function Cronometro({ selecionado, finalizarTarefa }: Props) {
         setTempo(contador - 1);
         return regressiva(contador - 1);
       }
+      playOn({ id: "alarm" });
       finalizarTarefa();
     }, 1000);
   }

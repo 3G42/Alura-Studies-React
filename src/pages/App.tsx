@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Cronometro from "../components/Cronometro";
 import Formulario from "../components/Formulario";
 import Lista from "../components/Lista";
 import { ITarefa } from "../types/tarefa";
 import style from "./style.module.scss";
-
 function App() {
   const [tarefas, setTarefas] = useState<ITarefa[]>([]);
   const [selecionado, setSelecionado] = useState<ITarefa>();
