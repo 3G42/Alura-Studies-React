@@ -18,7 +18,7 @@
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://3G42.github.io/alura-studies-react",
+  "homepage": "https://3g42.github.io/Alura-Studies-React",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
